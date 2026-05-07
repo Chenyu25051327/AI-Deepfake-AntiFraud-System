@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AI深度伪造风险识别与校园反诈体验系统</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="hero">
+      <div class="hero-badge">AI安全 · 校园反诈 · 深度伪造识别</div>
+      <h1>AI深度伪造风险识别与校园反诈体验系统</h1>
+      <p class="subtitle">基于 HTML、CSS 与 JavaScript 的 AI 伦理教育交互网页</p >
+      <div class="top-banner">
+        识别深度伪造风险 · 提升校园反诈意识 · 守护个人信息安全
+      </div>
+    </header>
+
+    <section class="card main-card">
+      <div class="section-title">
+        <span class="icon">🛡️</span>
+        <h2>一、诈骗情况分析助手</h2>
+      </div>
+      <p>
+        请把你遇到的可疑情况简单描述出来，系统会根据描述内容分析是否存在诈骗风险，
+        并给出风险等级、可疑细节、处理建议和进一步核实方法。
+      </p >
+
+      <textarea id="caseInput" placeholder="例如：有人说是我朋友，视频里长得很像他，让我马上转800元，还说不要告诉别人。"></textarea>
+
+      <button onclick="analyzeCase()">开始分析</button>
+
+      <div id="caseResult" class="result"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <span class="icon">🎭</span>
+        <h2>二、常见 AI 诈骗场景模拟</h2>
+      </div>
+      <p>选择一个场景，系统会展示该场景的风险点和正确处理方式。</p >
+
+      <select id="sceneType">
+        <option value="friend">AI换脸冒充好友借钱</option>
+        <option value="teacher">AI语音冒充辅导员通知缴费</option>
+        <option value="job">AI生成兼职招聘骗局</option>
+        <option value="parent">AI换脸冒充家长紧急转账</option>
+        <option value="email">AI伪造老师邮件收集个人信息</option>
+      </select>
+
+      <button onclick="showScene()">查看场景分析</button>
+
+      <div id="sceneResult" class="result"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <span class="icon">🔍</span>
+        <h2>三、深度伪造识别自测</h2>
+      </div>
+      <p>请勾选你在可疑视频、语音或聊天中发现的风险线索，系统会给出伪造风险判断。</p >
+
+      <div class="check-list">
+        <label><input type="checkbox" class="deepfakeItem"> 对方要求转账或借钱</label>
+        <label><input type="checkbox" class="deepfakeItem"> 对方催促马上操作</label>
+        <label><input type="checkbox" class="deepfakeItem"> 对方要求保密，不让告诉别人</label>
+        <label><input type="checkbox" class="deepfakeItem"> 视频画面中的嘴型和声音不完全同步</label>
+        <label><input type="checkbox" class="deepfakeItem"> 脸部边缘、光线或表情不自然</label>
+        <label><input type="checkbox" class="deepfakeItem"> 对方拒绝用原来的手机号或官方渠道确认</label>
+      </div>
+
+      <button onclick="checkDeepfake()">进行识别判断</button>
+
+      <div id="deepfakeResult" class="result"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <span class="icon">📌</span>
+        <h2>四、校园反诈处理建议生成器</h2>
+      </div>
+      <p>选择你遇到的问题类型，系统会给出处理建议。</p >
+
+      <select id="adviceType">
+        <option value="money">有人让我转账或借钱</option>
+        <option value="code">有人索要验证码或密码</option>
+        <option value="link">有人让我点击链接或扫码</option>
+        <option value="photo">个人照片被 AI 恶搞或换脸</option>
+        <option value="job">遇到高薪兼职或刷单任务</option>
+      </select>
+
+      <button onclick="generateAdvice()">生成建议</button>
+
+      <div id="adviceResult" class="result"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <span class="icon">🧠</span>
+        <h2>五、AI伦理知识卡片</h2>
+      </div>
+      <p>点击按钮，了解与 AI 深度伪造和反诈相关的基础概念。</p >
+
+      <div class="button-group">
+        <button onclick="showKnowledge('deepfake')">深度伪造</button>
+        <button onclick="showKnowledge('face')">AI换脸</button>
+        <button onclick="showKnowledge('voice')">语音克隆</button>
+        <button onclick="showKnowledge('privacy')">隐私保护</button>
+        <button onclick="showKnowledge('credit')">学术诚信</button>
+      </div>
+
+      <div id="knowledgeResult" class="result"></div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
